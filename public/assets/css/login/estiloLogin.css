@@ -1,0 +1,30 @@
+.icon{
+    width: 35px;
+    height: 35px;
+}
+
+.login-icon{
+    background-color: #cccccc8e;
+    border-radius: 30px;
+    padding: 5px;
+    margin-right: 10px;
+}
+
+.alinhamento-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #eee;
+}
+
+.login-area{
+    padding:20px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.botao-login{
+    background-color: #2bddce;
+    text-decoration: none;
+}
