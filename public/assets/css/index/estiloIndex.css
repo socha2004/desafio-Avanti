@@ -1,17 +1,21 @@
+body {
+    background-color: #ECEEDF;
+}
+
 header {
     background-color: #deeef7;
-    box-shadow: 1px 5px 5px -3px rgba(0,0,0,0.75);
+    box-shadow: 1px 5px 5px -3px rgba(0, 0, 0, 0.75);
     padding: 15px;
 }
 
-.header-navbar{
+.header-navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
 }
 
-.icon-header{
+.icon-header {
     margin-right: 10px;
 }
 
@@ -41,24 +45,60 @@ header {
     align-items: center;
 }
 
-.create-button{
+.create-button {
     background-color: #647FBC;
     border: none;
     font-size: 1.2em;
     padding: 10px;
     border-radius: 20px;
-    box-shadow: 3px 10px 14px -9px rgba(0,0,0,0.75);
+    box-shadow: 3px 10px 14px -9px rgba(0, 0, 0, 0.75);
     color: #fff;
     font-weight: bolder;
     display: flex;
     align-items: center;
 }
 
-.table-wraper{
-    width: 100vw;
-    border: 1px solid #ccc;
+.table-wraper {
+    display: flex;
+    justify-content: center;
+
+}
+
+.table-icon {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    color: #fff;
+}
+
+.table-icon img{
+    margin-right: 5px;
+    width: 2rem;
+    height: 2rem;
 }
 
 table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 10px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
 
+thead {
+    background: #f1f5f9;
+}
+
+thead th {
+    text-align: left;
+    padding: 12px 15px;
+    font-weight: bold;
+    color: #333;
+}
+
+tbody td {
+    padding: 12px 15px;
+    border-top: 1px solid #e5e7eb;
+    color: #555;
 }

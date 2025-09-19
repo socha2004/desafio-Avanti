@@ -20,7 +20,7 @@
             </div>
             <div class="commands-header">
 
-                <img src="assets/icons/blocks.svg" alt="blocks" class="icon">
+                <img src="assets/icons/shield.svg" alt="blocks" class="icon">
                 <span class="connected-info">Conectado</span>
 
                 <img src="assets/icons/logout.svg" alt="logout" class="icon">
@@ -39,10 +39,25 @@
         </div>
         <div class="table-wraper">
             <table>
-                <th>Nome</th>
-                <th>Quantidade</th>
-                <th>Preço</th>
-                <th>Ações</th>
+                <thead>
+                    <th>Nome</th>
+                    <th>Quantidade</th>
+                    <th>Preço</th>
+                    <th>Ações</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Sabão em pó</td>
+                        <td>5</td>
+                        <td>R$ 5.00</td>
+                        <td>
+                            <div class="table-icon">
+                                <img src="assets/icons/edit.svg" alt="edit" class="table-icon">
+                                <span>Editar</span>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
             </table>
         </div>
     </main>

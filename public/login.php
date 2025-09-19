@@ -12,23 +12,23 @@
 <body>
     <div class="alinhamento-login">
         <div class="login-area shadow">
-            <div class="d-flex align-items-center p-1">
+            <div class="login-header">
                 <img src="assets/icons/box.svg" alt="box icon" class="icon login-icon">
                 <h3>Avanti Inventory <br /> Management</h3>
             </div>
-            <span class="fw-semibold">Acesse sua conta para gerenciar o estoque</span>
+            <span class="">Acesse sua conta para gerenciar o estoque</span>
             <br />
             <br />
-            <form action="" class="d-flex flex-column" method="post">
-                <label for="usuario" class="fw-semibold">Usuário</label>
-                <input type="text" name="usuario" class="form-control">
+            <form action="" class="" method="post">
+                <label for="usuario" class="">Usuário</label>
+                <input type="text" name="usuario" class="">
 
-                <label for="senha" class="fw-semibold">Senha</label>
-                <input type="password" name="senha" class="form-control">
+                <label for="senha" class="">Senha</label>
+                <input type="password" name="senha" class="">
                 <br />
-                <input type="submit" value="Entrar" class="botao-login btn fw-semibold">
+                <input type="submit" value="Entrar" class="botao-login">
             </form>
-            <span class="fw-semibold">Esqueceu sua senha? Contate o administrador</span>
+            <span class="">Esqueceu sua senha? Contate o administrador</span>
         </div>
     </div>
 
