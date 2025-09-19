@@ -1,9 +1,9 @@
 body {
-    background-color: #ECEEDF;
+    background-color: #EEEEEE;
 }
 
 header {
-    background-color: #deeef7;
+    background-color: #647FBC;
     box-shadow: 1px 5px 5px -3px rgba(0, 0, 0, 0.75);
     padding: 15px;
 }
@@ -46,13 +46,13 @@ header {
 }
 
 .create-button {
-    background-color: #647FBC;
+    background-color: #4DFFBE;
     border: none;
     font-size: 1.2em;
     padding: 10px;
     border-radius: 20px;
     box-shadow: 3px 10px 14px -9px rgba(0, 0, 0, 0.75);
-    color: #fff;
+    color: #2C3E3A;
     font-weight: bolder;
     display: flex;
     align-items: center;
@@ -62,6 +62,12 @@ header {
     display: flex;
     justify-content: center;
 
+}
+
+.actions {
+    display: flex;
+    justify-content: end;
+    align-items: center;
 }
 
 .table-icon {
@@ -77,13 +83,30 @@ header {
     height: 2rem;
 }
 
+.edit {
+    background-color: #7D8D86;
+    padding: 5px;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+.delete {
+    background-color: #FA812F;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.delete:hover {
+    background: #FA812F;
+}
+
 table {
     border-collapse: collapse;
-    width: 100%;
+    width: 80%;
     margin: 10px;
     background: #fff;
     border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    box-shadow: 6px 7px 5px -1px rgba(0,0,0,0.75);
 }
 
 thead {
@@ -102,3 +125,4 @@ tbody td {
     border-top: 1px solid #e5e7eb;
     color: #555;
 }
+

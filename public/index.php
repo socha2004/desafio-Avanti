@@ -31,7 +31,7 @@
     </header>
     <main>
         <div class="products-header">
-            <h1>Produtos</h1>
+            <h1 style="color: #4F4F4F">Produtos</h1>
             <button class="create-button">
                 <img src="assets/icons/add.svg" alt="add" class="icon add-product-icon" style="margin-right: 10px;">
                 <span class="add-description">Adicionar Produto</span>
@@ -50,10 +50,14 @@
                         <td>Sabão em pó</td>
                         <td>5</td>
                         <td>R$ 5.00</td>
-                        <td>
-                            <div class="table-icon">
-                                <img src="assets/icons/edit.svg" alt="edit" class="table-icon">
+                        <td class="actions">
+                            <div class="table-icon edit">
+                                <img src="assets/icons/edit.svg" alt="edit">
                                 <span>Editar</span>
+                            </div>
+                            <div class="table-icon delete">
+                                <img src="assets/icons/trash.svg" alt="edit">
+                                <span>Excluir</span>
                             </div>
                         </td>
                     </tr>
