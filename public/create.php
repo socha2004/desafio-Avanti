@@ -19,8 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $descricao = $_POST['descricao'] ?? '';
 
     if ($controller->criarProduto($nome, $preco, $quantidade, $sku, $fornecedor, $descricao)) {
-       echo $descricao;
-        // header("Location: index.php?msg=criado");
+        header("Location: index.php?msg=criado");
         exit;
     } else {
         echo "<p style='color:red'>Erro ao atualizar</p>";
