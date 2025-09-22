@@ -17,7 +17,7 @@ Requisitos:
       CREATE TABLE produtos (
 	      id_produto INTEGER NOT NULL AUTO_INCREMENT UNIQUE,
         nome_produto VARCHAR(155) NOT NULL,
-        preco_produto DECIMAL(10, 2) NOT NULL
+        preco_produto DECIMAL(10, 2) NOT NULL,
    		quantidade_produto INTEGER NOT NULL,
    		sku_produto VARCHAR(155) NOT NULL,
    		fornecedor_produto VARCHAR(155) NOT NULL,
