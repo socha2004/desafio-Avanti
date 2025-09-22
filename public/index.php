@@ -1,3 +1,29 @@
+<?php
+session_start();
+if (!isset($_SESSION['usuario_id'])) {
+    header("Location: login.php");
+    exit;
+}
+
+require_once __DIR__ . '/../config/conexao.php';
+require_once __DIR__ . '/../src/controller/ProdutoController.php';
+
+$controller = new ProdutoController($conn);
+$produto = $controller->listarProdutos();
+?>
+
+<?php if (isset($_GET['msg']) && $_GET['msg'] === 'editado'): ?>
+    <script>
+        alert("Produto atualizado com sucesso!");
+    </script>
+<?php endif; ?>
+
+<?php if (isset($_GET['msg']) && $_GET['msg'] === 'excluido'): ?>
+    <script>
+        alert("Produto excluído com sucesso!");
+    </script>
+<?php endif; ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -19,23 +45,25 @@
                 <h2>Avanti Inventory Management</h2>
             </div>
             <div class="commands-header">
+                <div class="status-box">
+                    <img src="assets/icons/shield.svg" alt="blocks" class="icon">
+                    <span class="connected-info">Conectado</span>
+                </div>
 
-                <img src="assets/icons/shield.svg" alt="blocks" class="icon">
-                <span class="connected-info">Conectado</span>
-
-                <img src="assets/icons/logout.svg" alt="logout" class="icon">
-                <span>Sair</span>
-
+                <a href="logout.php"class="logout-button">
+                    <img src="assets/icons/logout.svg" alt="logout" class="icon">
+                    <span>Sair</span>
+                </a>
             </div>
         </nav>
     </header>
     <main>
         <div class="products-header">
             <h1 style="color: #4F4F4F">Produtos</h1>
-            <button class="create-button">
+            <a class="create-button" href="create.php">
                 <img src="assets/icons/add.svg" alt="add" class="icon add-product-icon" style="margin-right: 10px;">
                 <span class="add-description">Adicionar Produto</span>
-            </button>
+            </a>
         </div>
         <div class="table-wraper">
             <table>
@@ -43,24 +71,34 @@
                     <th>Nome</th>
                     <th>Quantidade</th>
                     <th>Preço</th>
-                    <th>Ações</th>
+                    <th style="text-align: right;">Ações</th>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>Sabão em pó</td>
-                        <td>5</td>
-                        <td>R$ 5.00</td>
-                        <td class="actions">
-                            <div class="table-icon edit">
-                                <img src="assets/icons/edit.svg" alt="edit">
-                                <span>Editar</span>
-                            </div>
-                            <div class="table-icon delete">
-                                <img src="assets/icons/trash.svg" alt="edit">
-                                <span>Excluir</span>
-                            </div>
-                        </td>
-                    </tr>
+                    <?php if (!empty($produto)): ?>
+                        <?php foreach ($produto as $p): ?>
+                            <tr>
+                                <td><?= htmlspecialchars($p['nome_produto']) ?></td>
+                                <td><?= htmlspecialchars($p['quantidade_produto']) ?></td>
+                                <td>R$ <?= htmlspecialchars($p['preco_produto']) ?></td>
+                                <td class="actions">
+                                    <a class="table-icon edit" href="update.php?id=<?= $p['id_produto'] ?>">
+                                        <img src="assets/icons/edit.svg" alt="edit">
+                                        <span>Editar</span>
+                                    </a>
+                                    <a class="table-icon delete" href="delete.php?id=<?= $p['id_produto'] ?>">
+                                        <img src="assets/icons/trash.svg" alt="delete">
+                                        <span>Excluir</span>
+                                    </a>
+                                </td>
+                            </tr>
+                        <?php endforeach; ?>
+                    <?php else: ?>
+                        <tr>
+                            <td colspan="4" style="text-align:center; color:gray; padding:10px;">
+                                Sem produtos no estoque.
+                            </td>
+                        </tr>
+                    <?php endif; ?>
                 </tbody>
             </table>
         </div>

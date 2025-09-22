@@ -1,0 +1,86 @@
+* {
+  box-sizing: border-box;
+}
+.create-form-wraper {
+    height: 100vh;
+    background-color: rgb(67, 68, 68);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-header {
+    display: flex;
+    align-items: center;
+}
+
+form {
+    width: 50%;
+    background-color: #F9F5F0;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 6px 7px 5px -5px rgba(0,0,0,0.75);
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Grupo de inputs em 2 colunas */
+.content-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* duas colunas */
+    gap: 20px;
+    /* espaçamento */
+}
+
+.buttons{
+    display: flex;
+    align-items: center;
+    width: 30%;
+}
+
+.buttons input {
+    background-color: #476EAE;
+    border-radius: 10px;
+    font-weight: 800;
+    color: #ccc;
+}
+
+.buttons a {
+    text-decoration: none;
+    padding: 8px;
+    margin-bottom: 15px;
+    margin-right: 10px;
+    background-color: #DC143C;
+    color: #ccc;
+    font-weight: 800;
+    border-radius: 10px;
+    border: none;
+}
+
+/* Responsividade: no mobile vira 1 coluna */
+@media (max-width: 600px) {
+    .content-group {
+        grid-template-columns: 1fr;
+    }
+
+    .form-header img {
+      
+    }
+
+    form{
+        
+    }
+}

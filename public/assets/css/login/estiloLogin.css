@@ -25,6 +25,29 @@
 }
 
 .botao-login{
-    background-color: #2bddce;
+    background-color: #647FBC;
     text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 12pt;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.error-box {
+    background-color: #e9b407;
+    padding: 10px;
+    border-radius: 15px;
+    color: #131212;
+    font-weight: bolder;
 }

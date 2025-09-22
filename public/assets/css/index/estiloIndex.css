@@ -6,6 +6,7 @@ header {
     background-color: #647FBC;
     box-shadow: 1px 5px 5px -3px rgba(0, 0, 0, 0.75);
     padding: 15px;
+    color: #2c2c2a;
 }
 
 .header-navbar {
@@ -38,6 +39,25 @@ header {
     margin-right: 20px;
 }
 
+.status-box {
+    display: flex;
+    align-items: center;
+    background-color: #0323d6;
+    color: #fff;
+    margin-right: 10px;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.logout-button {
+    display: flex; 
+    align-items: center; 
+    background-color: #e41a1aff;
+    color: #fff;
+    padding: 5px;
+    border-radius: 10px;
+}
+
 .products-header {
     padding: 20px;
     display: flex;
@@ -56,6 +76,11 @@ header {
     font-weight: bolder;
     display: flex;
     align-items: center;
+    text-decoration: none;
+}
+
+.create-button:hover {
+    background-color: #4dffbe71;
 }
 
 .table-wraper {
@@ -84,20 +109,24 @@ header {
 }
 
 .edit {
-    background-color: #7D8D86;
+    background-color: #045ee6;
     padding: 5px;
     border-radius: 10px;
     margin-right: 10px;
 }
 
+.edit:hover {
+    background-color: #3681f1;
+}
+
 .delete {
-    background-color: #FA812F;
+    background-color: #e23415;
     padding: 5px;
     border-radius: 10px;
 }
 
 .delete:hover {
-    background: #FA812F;
+    background: #b4754c;
 }
 
 table {
