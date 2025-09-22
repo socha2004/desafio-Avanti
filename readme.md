@@ -10,7 +10,7 @@ Requisitos:
 
 1. <b> Crie o banco SQL </b> <br>
    <code>
-      CREATE DATABASE sistema_login;
+      CREATE DATABASE desafio_avanti;
    </code>
 2. <b> Crie as tabelas </b> <br>
    <code>
