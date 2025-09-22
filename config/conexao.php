@@ -2,7 +2,7 @@
 $host = "hostname";
 $nomeDoBanco = "desafio_avanti";
 $usuario = "root";
-$senha = "socha_dev";
+$senha = "";
 
 try {
     $conn = new PDO("mysql:host=localhost;dbname=desafio_avanti;charset=utf8", $usuario, $senha);
