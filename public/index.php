@@ -18,6 +18,12 @@ $produto = $controller->listarProdutos();
     </script>
 <?php endif; ?>
 
+<?php if (isset($_GET['msg']) && $_GET['msg'] === 'criado'): ?>
+    <script>
+        alert("Produto criado com sucesso!");
+    </script>
+<?php endif; ?>
+
 <?php if (isset($_GET['msg']) && $_GET['msg'] === 'excluido'): ?>
     <script>
         alert("Produto excluído com sucesso!");
